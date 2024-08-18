@@ -34,9 +34,9 @@ body {
     text-decoration: underline;
 }
 
-/* Ensure content doesn't overlap with navbar */
+/* ensure content doesn't overlap with navbar */
 body {
-    padding-top: 60px; 
+    padding-top: 60px;
 }
 
 h1 {
@@ -77,42 +77,66 @@ button:hover {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* table for index page */
-.exchange-rates table {
+/* table styling for exchange rates */
+.rate-table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
 }
 
-.exchange-rates th, .exchange-rates td {
-    padding: 12px;
+.rate-table th, .rate-table td {
     border: 1px solid #ddd;
+    padding: 8px;
     text-align: center;
 }
 
-.exchange-rates th {
+.rate-table th {
     background-color: #2980b9;
     color: white;
-    font-weight: bold;
 }
 
-.exchange-rates tr:nth-child(even) {
-    background-color: #f2f2f2;
+.rate-table tr:nth-child(even) {
+    background-color: #f9f9f9;
 }
 
-.exchange-rates tr:hover {
-    background-color: #f1f1f1;
+.rate-table tr:hover {
+    background-color: #e0e0e0;
 }
 
-.rate {
-    padding: 8px;
-    border-bottom: 1px solid #ddd;
+#pagination-controls {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
 }
 
-.rate:last-child {
-    border-bottom: none;
+#pagination-controls button {
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #2980b9; 
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0 5px;
 }
 
+#pagination-controls button:hover {
+    background-color: #3498db;
+}
+
+#pagination-controls button:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+}
+
+#page-numbers {
+    font-size: 16px;
+    color: #333;
+    margin: 0 10px;
+}
+
+/* link styling */
 a {
     margin-top: 20px;
     text-decoration: none;
@@ -145,39 +169,6 @@ a:hover {
     background-color: #3498db;
 }
 
-/* pagination */
-#pagination-controls {
-    margin-top: 20px;
-    display: flex;
-    align-items: center;
-}
-
-#pagination-controls button {
-    padding: 10px 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #2980b9;
-    color: white;
-    cursor: pointer;
-    font-size: 16px;
-    margin: 0 5px;
-}
-
-#pagination-controls button:hover {
-    background-color: #3498db;
-}
-
-#pagination-controls button:disabled {
-    background-color: #bdc3c7;
-    cursor: not-allowed;
-}
-
-#page-numbers {
-    font-size: 16px;
-    color: #333;
-    margin: 0 10px;
-}
-
 /* result styling */
 #result {
     margin-top: 20px;
@@ -205,7 +196,7 @@ a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px; /* Add padding if needed */
+    padding: 20px; 
 }
 
 /* transparency for background */

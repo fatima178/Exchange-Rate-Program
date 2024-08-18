@@ -64,7 +64,7 @@ function displayExchangeRates() {
     exchangeRatesDiv.innerHTML = '';
 
     const table = document.createElement('table');
-    table.className = 'rate-table';
+    table.className = 'rate-table'; // Ensure table uses the class for styling
 
     const thead = document.createElement('thead');
     const headerRow = document.createElement('tr');
