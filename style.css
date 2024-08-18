@@ -198,6 +198,32 @@ a:hover {
     justify-content: center;
     padding: 20px; 
 }
+/* Home page styles */
+.home-page {
+    background-image: url('CurrencyHome.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    color: white;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.home-page-content {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
 
 /* transparency for background */
 .home-page::before {
@@ -216,3 +242,4 @@ a:hover {
     transform: translateY(-100%);
     transition: transform 0.3s ease-in-out;
 }
+
