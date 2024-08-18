@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Currency Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="home-page">
+    <!-- Navigation Menu -->
+    <nav class="navbar">
+        <a href="home.html">Home</a>
+        <a href="index.html">Exchange Rates</a>
+        <a href="convert.html">Convert Currency</a>
+    </nav>
+
+    <div class="home-page-content">
+        <h1>Welcome to the Currency Converter</h1>
+        <p>Convert currencies and view exchange rates with ease.</p>
+    </div>
+
+    <button id="back-to-top" onclick="scrollToTop()">Back to Top</button>
+
+    <script>
+        // Show the button when the user scrolls down 100px from the top of the document
+        window.onscroll = function() {
+            const button = document.getElementById('back-to-top');
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                button.style.display = "block";
+            } else {
+                button.style.display = "none";
+            }
+        };
+
+        // Smoothly scroll to the top of the page
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>

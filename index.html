@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exchange Rates - Currency Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Menu -->
+    <nav class="navbar">
+        <a href="home.html">Home</a>
+        <a href="index.html">Exchange Rates</a>
+        <a href="convert.html">Convert Currency</a>
+    </nav>
+
+    <h1>Exchange Rates</h1>
+
+    <div class="converter-form">
+        <label for="base-currency">Base Currency:</label>
+        <select id="base-currency">
+            <!-- Options will be dynamically added here -->
+        </select>
+
+        <button onclick="fetchExchangeRates()">Fetch Rates</button>
+
+        <div id="exchange-rates"></div>
+        <div id="pagination-controls" style="display: none;">
+            <button id="prev-page" onclick="changePage(-1)">Previous</button>
+            <span id="page-numbers"></span>
+            <button id="next-page" onclick="changePage(1)">Next</button>
+        </div>
+    </div>
+
+    <a href="home.html">Back to Home</a>
+
+    <button id="back-to-top" onclick="scrollToTop()">Back to Top</button>
+
+    <script src="index.js"></script>
+    <script>
+        // Show the button when the user scrolls down 100px from the top of the document
+        window.onscroll = function() {
+            const button = document.getElementById('back-to-top');
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                button.style.display = "block";
+            } else {
+                button.style.display = "none";
+            }
+        };
+
+        // Smoothly scroll to the top of the page
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert Currency - Currency Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Menu -->
+    <nav class="navbar">
+        <a href="home.html">Home</a>
+        <a href="index.html">Exchange Rates</a>
+        <a href="convert.html">Convert Currency</a>
+    </nav>
+
+    <h1>Convert Currency</h1>
+
+    <div class="converter-form">
+        <label for="from-currency">From:</label>
+        <select id="from-currency">
+            <!-- Options will be dynamically added here -->
+        </select>
+
+        <label for="to-currency">To:</label>
+        <select id="to-currency">
+            <!-- Options will be dynamically added here -->
+        </select>
+
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" placeholder="Enter amount" />
+
+        <button onclick="convertCurrency()">Convert</button>
+
+        <div id="result"></div>
+    </div>
+
+    <a href="index.html">Back to Exchange Rates</a>
+
+    <button id="back-to-top" onclick="scrollToTop()">Back to Top</button>
+
+    <script src="convert.js"></script>
+    <script>
+        // Show the button when the user scrolls down 100px from the top of the document
+        window.onscroll = function() {
+            const button = document.getElementById('back-to-top');
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                button.style.display = "block";
+            } else {
+                button.style.display = "none";
+            }
+        };
+
+        // Smoothly scroll to the top of the page
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>
