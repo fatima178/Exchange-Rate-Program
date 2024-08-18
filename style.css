@@ -12,7 +12,7 @@ body {
 /* menu style */
 .navbar {
     width: 100%;
-    background-color: #2980b9;
+    background-color: #6fa8ce;
     padding: 10px;
     position: fixed;
     top: 0;
@@ -209,4 +209,10 @@ a:hover {
     height: 100%;
     background: rgba(0, 0, 0, 0.3); 
     z-index: -1;
+}
+
+/* hidden navbar */
+.navbar.hidden {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
 }

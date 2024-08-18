@@ -55,6 +55,33 @@
                 behavior: 'smooth'
             });
         }
+
+        // hide/show the navbar on scroll
+        document.addEventListener('DOMContentLoaded', () => {
+            const navbar = document.querySelector('.navbar');
+            let lastScrollTop = 0;
+            let ticking = false;
+
+            function onScroll() {
+                if (!ticking) {
+                    window.requestAnimationFrame(() => {
+                        const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                        if (currentScrollTop > lastScrollTop) {
+                            // Scrolling down
+                            navbar.classList.add('hidden');
+                        } else {
+                            // Scrolling up
+                            navbar.classList.remove('hidden');
+                        }
+                        lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            }
+
+            window.addEventListener('scroll', onScroll);
+        });
     </script>
 </body>
 </html>
